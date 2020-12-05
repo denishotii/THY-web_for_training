@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Upload Files</title>
+		<link rel="icon" href="img/logo.png" sizes="25x25">
+		<style media="screen">
+			body{
+				/*display: flex;
+				min-height: 100vh;
+				widows: 100%;
+				padding: 0;
+				margin: 0;*/
+				
+			}
+			.alert{
+				margin-top: 60px;
+			}
+		</style>
+		<script src="https://kit.fontawesome.com/46323304fb.js" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="CSS/style.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	</head>
+	<body style="background-color: #333;">
+		<div class="fixed-top navbar-dark">
+		  <div class="collapse" id="navbarToggleExternalContent">
+		    <div class="bg-dark p-4">
+		      <h5 class="text-white h4">THY - Trajnim</h5>
+		      <span class="text-muted">Këtu mund ti dërgoni të gjitha detyrat e punuara nga ju për trajnimin HTML , CSS , JS<br> Me rrespekt <b>Denis Hoti</b></span>
+		    </div>
+		  </div>
+		  <nav class="navbar navbar-dark bg-dark">
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <ul class="nav mr-auto nav-1">
+		    	<li class="nav-item active" style="width:auto" onclick="goBack()">
+		        	<a class="nav-link" style="color:white;margin-left: 25px; cursor: pointer;">Back<span class="sr-only">(current)</span></a>
+		       </li>
+		        <li class="nav-item active" onclick="document.getElementById('id01').style.display='block'" style="width:auto">
+		          <a class="nav-link" id="modal_trigger" style="color:white;margin-left: 25px; cursor: pointer;">   Login <span class="sr-only">(current)</span></a>
+		       </li>
+		    </ul>
+		  </nav>
+		</div>
+
+		<!--User-->
+		<div id="id01" class="modal">
+		  <form id="modal-content" class="modal-content animate" method="post">
+		    <div class="imgcontainer">
+		      <span id="span1" onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+		      
+		    </div>
+		    <div style="width: 100%;text-align: center;">
+		      <p style=" font-weight: bold;">Nëse jeni i regjistruar atëherë kyquni, nëse jo regjistrohuni!!!</p>
+		    </div>
+		    <div class="container">
+		      <label for="uname"><b>Email</b></label>
+		      <input id="input100" type="text" placeholder="Shëno Emailin" name="uname" required>
+
+		      <label for="psw"><b>Pasword</b></label>
+		      <i id="i-2" style="display: inline;font-size: 20px;margin-left: 20px;" class="far fa-eye i"></i>
+		      <i id="i-3" style="display: none;font-size: 20px;margin-left: 20px;" class="far fa-eye-slash i"></i>
+		      <input id="input10" type="password" placeholder="Shëno paswordin" name="psw" required>
+
+		        
+		      <button id="button10">Kyqu</button>
+		      <button id="button11">Regjistrohu</button>
+		    </form>
+		    </div>
+		    <div class="user-div" id="id02">
+		      <h2>MIRË SE ERDHËT!!!</h2>
+		      <p id="h2-2">Mirë se erdhët përsëri në faqen tonë!!</p>
+		      <p>Ju jeni i kyqur si:<p id="userId"></p></p>
+		      <button id="button12">Çkyqu</button>
+		    </div>
+		    <div class="user-div-1">
+		      <h2>MIRË SE ERDHËT!!!</h2>
+		      <p id="h2-2">Para se të kyqeni ju duhet të konfirmoni emailin tuaj!!!</p>
+		      <p>Ne ju kemi dërguar në email një link ju duhet vetem ta klikoni atë!!</p>
+		      <button id="button12">Mbrapa</button>
+		    </div>
+		    <div class="container" style="background-color:#f1f1f1">
+		      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+		      <span class="psw">Keni Harruar <a href="../../resetPwd/">Paswordin?</a></span>
+		    </div>
+		</div>
+
+		<!--end-->
+		<div id="aler-1" class="alert alert-warning alert-dismissible fade show" role="alert" style="display: block; margin-bottom: 50px;">
+		  <strong>Hello!</strong> Ju duhet të jeni USER për të dërguar FILES
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		    <span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div id="alert-2" class="alert alert-success" role="alert" style="display: none;">
+		  <h4 class="alert-heading">Well done :)</h4>
+		  <p>Aww yeah, Ti me sukses i ke dërguar FILES në serverin përkatës.Faleminderit shumë për punën tuaj</p>
+		  <hr>
+		  <p class="mb-0">Kurdo që ke nevojë të shtosh ndonjë FILE tjetër mos hezito!!!</p>
+		</div>
+	 <div class="div-1">
+	     <progress value="0" max="100" id="uploader"></progress><br>
+	     <input type="file" class="btn btn-primary" value="upload" id="fileButton" />
+	    <!-- <button class="button btn btn-primary">Dërgo</button>-->
+	 </div>
+	 <script>
+		function goBack() {
+		  window.history.back();
+		}
+	</script>
+	     	<!-- The core Firebase JS SDK is always required and must be listed first -->
+				<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+				<!-- TODO: Add SDKs for Firebase products that you want to use
+				     https://firebase.google.com/docs/web/setup#available-libraries -->
+				<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+				<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-storage.js"></script>
+				<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+				<script>
+				  // Your web app's Firebase configuration
+				  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+				  var firebaseConfig = {
+				    apiKey: "AIzaSyCcuPeIoh3upV5JsvAYhk4U4bd9h6c2X_M",
+				    authDomain: "thy-trajnimi.firebaseapp.com",
+				    databaseURL: "https://thy-trajnimi.firebaseio.com",
+				    projectId: "thy-trajnimi",
+				    storageBucket: "thy-trajnimi.appspot.com",
+				    messagingSenderId: "958391775229",
+				    appId: "1:958391775229:web:5d3b5050fd71538cd9b394",
+				    measurementId: "G-1F02JWZ26H"
+				  };
+				  // Initialize Firebase
+				  firebase.initializeApp(firebaseConfig);
+
+				 
+
+
+				</script>
+
+				<script type="text/javascript" src="JS/files.js"></script>
+				<script type="text/javascript" src="JS/app.js"></script>
+				<script type="text/javascript" src="JS/pass.js"></script>
+				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	</body>
+</html>

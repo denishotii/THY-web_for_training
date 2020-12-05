@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>THY - Trajnimi - contact</title>
+	<link rel="icon" href="img/logo.png" sizes="25x25">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="./CSS/style.css">
+	<script src="https://kit.fontawesome.com/46323304fb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<section class="contact">
+		<div class="content">
+			<h5 class="h5" onclick="goBack()">Back</h5>
+			<h2>Contact Us</h2>
+			<p>It would be nice if we could get a message from you!<br> Like any comment or any advice!<br> Thank you very much!</p>
+		</div>
+		<div class="container">
+			<div class="contactInfo">
+				<div class="box">
+					<div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+					<div class="text">
+						<h3>Address</h3>
+						<p>4671 Sugar Camp Road,<br>Owatonna,Minnesota,<br>55060</p>
+					</div>
+				</div>
+				<div class="box">
+					<div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+					<div class="text">
+						<h3>Phone</h3>
+						<p>507-475-6094</p>
+					</div>
+				</div>
+				<div class="box">
+					<div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+					<div class="text">
+						<h3>Email</h3>
+						<p>
+                           <a target="_blank" href="mailto:denisshanihoti@gmail.com">denisshanihoti@gmail.com</a>
+                        </p>
+					</div>
+				</div>
+			</div>
+			<div class="contactForm">
+				<form id="contactForm" method="post">
+					<h2>Send Message</h2>
+					<div class="alert">Your message has been sent!</div>
+					<div class="inputBox">
+						<input type="text" id="name" name="name" required="required">
+						<span>Full Name</span>
+					</div>
+					<div class="inputBox">
+						<input type="email" id="email" name="email" required="required">
+						<span>Email</span>
+					</div>
+					<div class="inputBox">
+						<textarea id="message" name="message" required="required"></textarea>
+						<span>Type your Message...</span>
+					</div>
+					<div class="inputBox">
+						<!--<input id="button" type="submit" name="submit" value="submit">-->
+						<button id="button" type="submit">Sent</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+		function goBack() {
+		  window.history.back();
+		}
+	</script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+				 <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase.js"></script>
+				<script>
+				  // Your web app's Firebase configuration
+				  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+				  var firebaseConfig = {
+				    apiKey: "AIzaSyCcuPeIoh3upV5JsvAYhk4U4bd9h6c2X_M",
+				    authDomain: "thy-trajnimi.firebaseapp.com",
+				    databaseURL: "https://thy-trajnimi.firebaseio.com",
+				    projectId: "thy-trajnimi",
+				    storageBucket: "thy-trajnimi.appspot.com",
+				    messagingSenderId: "958391775229",
+				    appId: "1:958391775229:web:5d3b5050fd71538cd9b394",
+				    measurementId: "G-1F02JWZ26H"
+				  };
+				  // Initialize Firebase
+				  firebase.initializeApp(firebaseConfig);
+
+				 
+
+
+				</script>
+				<script src="JS/main.js"></script>
+</body>
+</html>

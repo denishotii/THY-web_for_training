@@ -1,0 +1,152 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.div-1{
+        position: absolute;
+        top: 220px;
+        right: 10%;
+				border: 1px solid black;
+				width: 80%;
+				height: 300px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+#uploader {
+				-webkit-appearance: none;
+				appearance : none;
+				width: 50%;
+				margin-bottom: 10px; 
+			}
+#fileButton{
+
+}
+.button{
+      margin-top: 25px;
+      width: 100px;
+      height: 50px;
+}      
+@media screen and (max-width: 500px){
+  .div-1{
+        position: none;
+        top: 200px;
+        right: 5%;
+        width: 90%;
+        height: 200px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+#uploader {
+       -webkit-appearance: none;
+        appearance : none;
+        width: 90%;
+        margin-bottom: 10px; 
+      }
+}
+#span1:hover{
+  cursor: pointer;
+}
+.modal-content {
+  border: 1px solid #f1f1f1;
+  display: block;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#button10 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#button10:hover {
+  opacity: 0.8;
+}
+
+#button11 {
+  background-color: #2a9df4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#button12:hover {
+  opacity: 0.8;
+}
+#button12 {
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#button11:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+.user-div{
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  display: none;
+}
+.user-div-1{
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  display: none;
+}
